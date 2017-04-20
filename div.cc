@@ -1,12 +1,16 @@
-nclude "base.h"
+#include "div.h"
 
 //Constructors
-Div:Div() : x('/'), left(0), right(0){}
-Div:Div(Base* left, Base* right): x('/'), left(childLeft), right(childRight){}
+Div::Div() 
+:x('/'), childLeft(0), childRight(0)
+{}
+
+Div::Div(Base* a, Base* b)
+:x('/'), childLeft(a), childRight(b)
+{}
+
 //Virtual Functions
-virtual double Div:evaluate(Base* left, Base* right){
+double Div::evaluate()
+{
 	return (childLeft->evaluate() / childRight->evaluate());	
 }
-
-};
-#endif

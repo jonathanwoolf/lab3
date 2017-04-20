@@ -1,12 +1,16 @@
-#include "base.h"
+#include "sqr.h"
 
 //Constructors
-Square:Square() : x(std::string"^2"), left(0), right(0){}
-Square:Square(Base* left, Base* right): x(std::"^2"), left(childLeft){}
-//Virtual Functions
-virtual double Sqr:evaluate(Base* left, Base* right){
-	return (childLeft->evaluate() * childRight->evaluate());	
-}
+Square::Square() 
+:x(std::string("^2")), onlyChild(0)
+{}
 
-};
-#endif
+Square::Square(Base* a)
+:x(std::string("^2")), onlyChild(a)
+{}
+
+//Virtual Functions
+double Square::evaluate()
+{
+	return (onlyChild->evaluate() * onlyChild->evaluate());	
+}

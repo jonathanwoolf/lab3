@@ -2,6 +2,7 @@
 #define __SQR_H__
 
 #include "base.h"
+#include <string>
 
 class Square: public Base
 {

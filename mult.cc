@@ -1,12 +1,16 @@
-#include "base.h"
+#include "mult.h"
 
 //Constructors
-Mult:Mult() : x('*'), left(0), right(0){}
-Mult:Mult(Base* left, Base* right): x('*'), left(childLeft), right(childRight){}
+Mult::Mult() 
+:x('*'), childLeft(0), childRight(0)
+{}
+
+Mult::Mult(Base* a, Base* b)
+:x('*'), childLeft(a), childRight(b)
+{}
+
 //Virtual Functions
-virtual double Mult:evaluate(Base* left, Base* right){
+double Mult::evaluate()
+{
 	return (childLeft->evaluate() * childRight->evaluate());	
 }
-
-};
-#endif

@@ -1,13 +1,18 @@
-#include "base.h"
+#include "add.h"
 
 //Constructors
-Add:Add() : x('+'), left(0), right(0){}
-Add:Add(Base* left, Base* right): x('+'), left(childLeft), right(childRight){}
+Add::Add() 
+:x('+'), childLeft(0), childRight(0)
+{}
+
+Add::Add(Base* a, Base* b)
+:x('+'), childLeft(a), childRight(b)
+{}
+
 //Virtual Functions
-virtual double Add:evaluate(Base* left, Base* right){
+double Add::evaluate()
+{
         return (childLeft->evaluate() + childRight->evaluate());
 }
 
-};
-#endif
 

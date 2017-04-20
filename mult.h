@@ -1,5 +1,5 @@
-#ifndef __ADD_H__
-#define __ADD_H__
+#ifndef __MULT_H__
+#define __MULT_H__
 
 #include "base.h"
 
@@ -12,7 +12,7 @@ Base* childRight;
 
 //Constructors
 Mult(); 
-MultBase*, Base*);
+Mult(Base*, Base*);
 
 //Virtual Functions
 virtual double evaluate();

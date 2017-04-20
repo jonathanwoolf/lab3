@@ -5,15 +5,17 @@
 
 class Sub: public Base
 {
-public:
+public: 
 char x;
 Base* childLeft;
 Base* childRight;
 
-//Constructors
+//constructors
 Sub();
 Sub(Base*, Base*);
 
 //Virtual Functions
-Virtual double evaluate();
+virtual double evaluate();
 };
+
+#endif
